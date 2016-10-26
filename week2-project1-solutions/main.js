@@ -160,8 +160,19 @@ if (score >=90) {
 //    In a single command, take the user's answers and display into the HTML page the sentence:
 //   "My name is __. I'm __ years old, and I live in __."
 
+// let qaName = prompt('Type your name');
+// let qaAge = prompt('Type your age.');
+// let qaLive = prompt('Where do you live?');
 
+document.getElementById('qaS').addEventListener('click', function(){
 
+  let qaName = document.getElementById('qaName').value
+  let qaAge = document.getElementById('qaAge').value
+  let qaLive = document.getElementById('qaLive').value
+  let qaOutput = "My name is " + qaName + ". I'm " + qaAge + " years old, and I live in " + qaLive +"."
+
+  document.getElementById('qa').innerHTML = qaOutput
+})
 
 
 
@@ -169,24 +180,34 @@ if (score >=90) {
 //     The rectangle is: 2 inches by 3 inches
 //     Display the result in the HTML page.
 
+function recArea(l, w) {
+  return l*w
+}
 
-
+document.getElementById('qb').innerHTML = recArea(3,2)
 
 
 
 // C. Collect the use's length and width input to determine the area of a rectangle and display within the HTML page the result.
 
+document.getElementById('calcArea').addEventListener('click', function(){
 
+  let recL = document.getElementById('recL').value
+  let recW = document.getElementById('recW').value
 
-
+  document.getElementById('qc').innerHTML = recArea(recL, recW)
+})
 
 
 
 // D. Have the user enter their name into a textfield. When they click a button, find the length (number of characters) of their name and display the result in the HTML page.
 
 
+document.getElementById('nameLengthCalc').addEventListener('click', function(){
+  let qdName = document.getElementById('qdName').value
 
-
+  document.getElementById('qd').innerHTML = qdName.length
+})
 
 
 
@@ -195,6 +216,26 @@ if (score >=90) {
 //    If the score is between 60 and 89, display a message of "Nice work, keep practicing.".
 //    If the score is below 59, display a message of "Very bad: study more and retake the test.".
 //    You can get fancy by adding CSS styles to each of these displays to change the color, too - Green=Good, Orange=OK, Red=Bad
+
+
+
+document.getElementById('scoreCalc').addEventListener('click', function(){
+
+  let qeScore = document.getElementById('qeScore').value
+
+  if (qeScore >=90) {
+    document.getElementById('qe').style.color = 'green'
+    document.getElementById('qe').innerHTML = qeScore + "%: Great job!"
+
+  } else if (qeScore >=60 && qeScore <=89){
+    document.getElementById('qe').style.color = 'orange'
+    document.getElementById('qe').innerHTML = qeScore + "%: Nice work, keep practicing."
+  } else {
+    document.getElementById('qe').style.color = 'red'
+    document.getElementById('qe').innerHTML = qeScore + "%: Very bad -  study more and retake the test."
+  }
+})
+
 
 
 
