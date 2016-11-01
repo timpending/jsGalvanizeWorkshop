@@ -13,8 +13,6 @@ problem.
 // 1. Connect the main.js document to the HTML page.
 //    Then Update the Text to Green by adding the .status-good class.
 
-
-
 // When the JS is connected properly, the following code will update the status message.
 document.getElementById("q1").innerHTML = "JS Page Connected Properly!";
 document.getElementById("q1").classList.add("status-good");
@@ -143,10 +141,13 @@ let score = Math.ceil(Math.random()*100)
 
 if (score >=90) {
   document.getElementById('q10').innerHTML = score + "%: Great job!"
+
 } else if (score >=60 && score <=89){
   document.getElementById('q10').innerHTML = score + "%: Nice work, keep practicing."
+
 } else {
   document.getElementById('q10').innerHTML = score + "%: Very bad -  study more and retake the test."
+
 }
 
 
@@ -234,6 +235,7 @@ document.getElementById('scoreCalc').addEventListener('click', function(){
     document.getElementById('qe').style.color = 'red'
     document.getElementById('qe').innerHTML = qeScore + "%: Very bad -  study more and retake the test."
   }
+
 })
 
 
