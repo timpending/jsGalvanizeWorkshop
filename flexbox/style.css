@@ -1,0 +1,59 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  /*display: flex;
+  justify-content: center;
+  align-items: center;*/
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  height: 20px;
+  background-color: lightblue;
+}
+
+#molly {
+  width:95%;
+  margin: 0 auto;
+}
+
+li {
+  width: auto;
+  display:flex;
+}
+
+#container {
+    background-color: lightgreen;
+    width: 80vw; /*view width & view hidth*/
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*flex-direction: row-reverse;*/
+    /*align-self: center;*/
+    /*align-items: flex-end;*/
+    /*justify-content: space-between;*/
+    /*justify-content: space-around;*/
+}
+
+.block {
+  width: 20vw;
+  height: 20vh;
+}
+
+.red {
+  background-color: red;
+  /*align-self: flex-end;*/
+}
+
+.yellow {
+  background-color: yellow;
+  /*flex-grow: 1;*/
+  /*order: -1*/
+}
+
+.blue {
+  background-color: blue;
+  /*align-self: flex-end;*/
+}
